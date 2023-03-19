@@ -3,6 +3,7 @@ PyQt-env/*
 PyQt-Env
 PyQt-Env/*
 .vscode
+/.idea
 *.mm
 __pycache__
 build/

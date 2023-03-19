@@ -90,7 +90,7 @@ class Product(Model):
         """
         now = pytz.utc.localize(datetime.utcnow())
         for hap in self.happy_hours:
-            if now >= pytz.utc.localize(hap.start) and now <= pytz.utc.localize(
+            if pytz.utc.localize(hap.start) <= now <= pytz.utc.localize(
                 hap.end
             ):
                 return hap.price
